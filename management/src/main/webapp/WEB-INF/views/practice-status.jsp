@@ -19,7 +19,7 @@ request.setAttribute("leftMenuId",list[3]);
 <html>
   <head>
     	<base href="<%=basePath%>">
-    
+
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>学习进度</title>
@@ -29,17 +29,17 @@ request.setAttribute("leftMenuId",list[3]);
 		<link href="resources/bootstrap/css/bootstrap-huan.css" rel="stylesheet">
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<link href="resources/css/exam.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 		<style type="text/css">
 			#training-table{
 				cursor:pointer;
-				
+
 			}
 			#training-table tr:hover{
 				background-color:#EEE;
-			}	
+			}
 			#field-switch{
 				margin:15px 0 0 15px;;
 				height:34px;
@@ -64,7 +64,7 @@ request.setAttribute("leftMenuId",list[3]);
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -111,17 +111,17 @@ request.setAttribute("leftMenuId",list[3]);
 							<!-- 在这里添加一个专业的选择按钮  -->
 							<select id="field-switch" class="form-control">
 								<c:forEach items="${fieldList }" var="item">
-									
+
 									<option value="${item.fieldId }">${item.fieldName }</option>
-									
-									
+
+
 								</c:forEach>
 								<!-- <option value="4">公务员申论</option>
 								<option value="5">医药行业考试</option> -->
 							</select>
 							<div class="col-xs-12">
 								<div id="question-list">
-									
+
 									<c:forEach items="${kparl }" var="item">
 										<table class="table-striped table">
 											<thead>
@@ -148,17 +148,17 @@ request.setAttribute("leftMenuId",list[3]);
 											<tfoot></tfoot>
 										</table>
 									</c:forEach>
-									
+
 								</div>
 							</div>
-							
+
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -172,7 +172,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -190,25 +190,25 @@ request.setAttribute("leftMenuId",list[3]);
 			$(function() {
 				$("#training-table tr").click(function(){
 					console.log("load section.......");
-					
+
 					  $('#section-content').load('admin/training/section-list/' + $($(this).find("td")[1]   ).find("a").data("id"));
-					  
+
 					  $(".add-section-btn").show();
-					  
+
 					  $("#training-name").val($(    $(this).find("td")[1]     ).find("a").text()                                  );
 					  $("#training-add-id").val($(    $(this).find("td")[1]     ).find("a").data("id")                                  );
 					  console.log($("#training-add-id").val());
 				});
-				
-				
+
+
 				$(".add-section-btn").click(function(){
 						$("#add-section-modal").modal({
 							backdrop : true,
 							keyboard : true
 						});
-					
+
 				});
-				
+
 				$("#field-switch").val("${fieldId}");
 				$("#field-switch").change(function(){
 					//alert(123);

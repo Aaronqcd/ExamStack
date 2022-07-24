@@ -168,7 +168,7 @@
 								<select id="department-input-select-u" class="df-input-narrow">
 									<option value="-1">--请选择--</option>
 									<c:forEach items="${depList }" var="item">
-										<option value="${item.depId }" 
+										<option value="${item.depId }"
 											<c:if test="${item.depId == sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.depId }">
 												selected="selected"
 											</c:if>
@@ -196,7 +196,7 @@
 		</div>
 	</div>
 
-	<footer>
+	<%--<footer>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -214,7 +214,7 @@
 
 		</div>
 
-	</footer>
+	</footer>--%>
 
 	<!-- Slider Ends -->
 

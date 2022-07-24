@@ -19,7 +19,7 @@ request.setAttribute("leftMenuId",list[3]);
 <html>
   <head>
     <base href="<%=basePath%>">
-    
+
    		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>试题管理</title>
@@ -28,7 +28,7 @@ request.setAttribute("leftMenuId",list[3]);
 		<link href="resources/bootstrap/css/bootstrap-huan.css" rel="stylesheet">
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<link href="resources/css/question-add.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 		<link href="resources/css/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
@@ -36,31 +36,31 @@ request.setAttribute("leftMenuId",list[3]);
 			.uploadify-button-text{
 				text-decoration: underline;
 			}
-			
+
 			span.add-img{
 				text-decoration: underline;
 				cursor:pointer;
 			}
-			
+
 			span.add-img:hover{
 				text-decoration: underline;
 			}
-			
+
 			.swfupload {
    				z-index: 10000 !important;
 			}
-			
+
 			.add-content-img{
 				display:block;
 			}
-			
+
 			.diaplay-img{
 				margin-right:5px;
 			}
-			
+
 			.diaplay-img:hover{
 				text-decoration: underline;
-				
+
 			}
 		</style>
 	</head>
@@ -81,7 +81,7 @@ request.setAttribute("leftMenuId",list[3]);
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -162,7 +162,7 @@ request.setAttribute("leftMenuId",list[3]);
 												</select>
 											</div>
 										</div>
-										
+
 										<div style="text-align:center;margin:10px 0;">
 											<button id="add-point-btn" class="btn btn-primary btn-xs">选择知识分类</button>
 											<button id="del-point-btn" class="btn btn-danger btn-xs">删除知识分类</button>
@@ -176,10 +176,10 @@ request.setAttribute("leftMenuId",list[3]);
 									</div>
 									<span class="form-message"></span>
 								</div>
-								
+
 								<div class="form-line question-content">
 									<span class="form-label"><span class="warning-label">*</span>试题内容：</span>
-									<textarea class="add-question-ta"></textarea>									
+									<textarea class="add-question-ta"></textarea>
 									<span class="add-img add-content-img" style="width:100px;">添加图片</span>
 									<span class="form-message"></span>
 								</div>
@@ -302,20 +302,20 @@ request.setAttribute("leftMenuId",list[3]);
 											<div class="form-line" id="uploadify"></div>
 											<span class="form-message">请上传png、jpg图片文件，且不能大于100KB。为了使得图片显示正常，请上传的图片长宽比例为2:1</span>
 										</div>
-									</form> 
+									</form>
 								</div>
 						      </div>
-						      
+
 						    </div><!-- /.modal-content -->
 						  </div><!-- /.modal-dialog -->
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -329,7 +329,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -338,14 +338,14 @@ request.setAttribute("leftMenuId",list[3]);
 		<script type="text/javascript" src="resources/js/jquery/jquery-1.9.0.min.js"></script>
 		<script type="text/javascript" src="resources/js/all.js"></script>
 		<script type="text/javascript" src="resources/js/jquery-ui-1.9.2.custom.min.js"></script>
-		
+
 		<script type="text/javascript" src="resources/js/uploadify/jquery.uploadify3.1Fixed.js"></script>
 		<script type="text/javascript" src="resources/js/question-upload-img.js"></script>
 		<script type="text/javascript" src="resources/js/field-2-point.js"></script>
 		<script type="text/javascript" src="resources/js/question-add.js"></script>
-		
+
 		<!-- Bootstrap JS -->
 		<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
-		
+
 	</body>
 </html>

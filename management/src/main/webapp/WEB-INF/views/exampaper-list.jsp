@@ -27,7 +27,7 @@ request.setAttribute("leftMenuId",list[3]);
 		<link href="resources/bootstrap/css/bootstrap-huan.css" rel="stylesheet">
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<link href="resources/css/exam.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 		<style>
@@ -53,7 +53,7 @@ request.setAttribute("leftMenuId",list[3]);
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -113,7 +113,7 @@ request.setAttribute("leftMenuId",list[3]);
 										</c:forEach>
 									</dd>
 								</dl>
-								
+
 
 								<div class="page-link-content">
 									<ul class="pagination pagination-sm">${pageStr}</ul>
@@ -168,7 +168,7 @@ request.setAttribute("leftMenuId",list[3]);
 												<td>
 													<c:choose>
 														<c:when test="${item.answer_sheet == null }">
-															
+
 															<span class="label-default label-sm label">未完成</span>
 														</c:when>
 														<c:otherwise>
@@ -192,7 +192,7 @@ request.setAttribute("leftMenuId",list[3]);
 												</td>
 											</tr>
 										</c:forEach>
-										
+
 									</tbody><tfoot></tfoot>
 								</table>
 								<div class="modal fade" id="change-property-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -218,7 +218,7 @@ request.setAttribute("leftMenuId",list[3]);
 														     		<div class="form-line exampaper-type" id="exampaper-type">
 																		<span class="form-label"><span class="warning-label">*</span>分类：</span>
 																		<select id="exampaper-type-select" class="df-input-narrow">
-																			
+
 																			<option value="1">随机组卷</option>
 																			<option value="2">模拟考试</option>
 																			<option value="3">专家试卷</option>
@@ -244,7 +244,7 @@ request.setAttribute("leftMenuId",list[3]);
 			</div>
 		</div>
 
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -258,7 +258,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 

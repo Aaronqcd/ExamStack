@@ -27,7 +27,7 @@ request.setAttribute("leftMenuId",list[3]);
 		<link href="resources/bootstrap/css/bootstrap-huan.css" rel="stylesheet">
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<link href="resources/css/exam.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 		<style>
@@ -53,7 +53,7 @@ request.setAttribute("leftMenuId",list[3]);
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -103,8 +103,8 @@ request.setAttribute("leftMenuId",list[3]);
 											<td>ID</td><td>考试名称</td>
 											<td>起始时间</td>
 											<td>截止时间</td>
-											
-											
+
+
 											<td>试卷</td><td>创建人</td><td>状态</td><td>操作</td>
 										</tr>
 									</thead>
@@ -115,11 +115,11 @@ request.setAttribute("leftMenuId",list[3]);
 												${item.examId }
 												</td>
 												<td>
-												
-												
+
+
 													<span>${item.examName }</span><br>
 													<a href="<%=list[1]%>/exam/exam-student-list/${item.examId }" target="_blank">学员名单</a>
-												
+
 												</td>
 												<td><fmt:formatDate value="${item.effTime}" pattern="yyyy-MM-dd HH:mm"/></td>
 												<td><fmt:formatDate value="${item.expTime}" pattern="yyyy-MM-dd HH:mm"/></td>
@@ -149,13 +149,13 @@ request.setAttribute("leftMenuId",list[3]);
 														</c:when>
 													</c:choose>
 												</td>
-												
+
 											</tr>
 										</c:forEach>
-											
+
 									</tbody><tfoot></tfoot>
 								</table>
-								
+
 							</div>
 							<div class="page-link-content">
 									<ul class="pagination pagination-sm">${pageStr}</ul>
@@ -167,7 +167,7 @@ request.setAttribute("leftMenuId",list[3]);
 			</div>
 		</div>
 
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -181,7 +181,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -191,7 +191,7 @@ request.setAttribute("leftMenuId",list[3]);
 		<script type="text/javascript" src="resources/js/all.js"></script>
 		<!-- Bootstrap JS -->
 		<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
-		
+
 		<script type="text/javascript" src="resources/js/exam-list.js"></script>
 	</body>
 </html>

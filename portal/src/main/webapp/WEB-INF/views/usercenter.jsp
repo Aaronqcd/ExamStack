@@ -14,7 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     	<base href="<%=basePath%>">
-    
+
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>用户中心</title>
@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<link href="resources/bootstrap/css/bootstrap-huan.css" rel="stylesheet">
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<link href="resources/css/exam.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 		<!--[if lte IE 8]>
@@ -34,26 +34,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			.table-striped a{
 				text-decoration: underline;
 			}
-			
+
 			.span-success{
 				color:#5cb85c;
 				font-weight:bolder;
 			}
-			
+
 			.span-danger{
 				color:#d9534f;
 				font-weight:bolder;
 			}
-			
+
 			.span-info{
 				color:#5bc0de;
 				font-weight:bolder;
 			}
-			
+
 			h6{
-				font-weight:bold !important; 
+				font-weight:bold !important;
 			}
-			
+
 			.radar-legend li span {
 				display: block;
 				position: absolute;
@@ -63,7 +63,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				height: 100%;
 				border-radius: 5px;
 			}
-			
+
 			.radar-legend li {
 				display: block;
 				padding-left: 30px;
@@ -77,8 +77,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				-moz-transition: background-color 200ms ease-in-out;
 				-o-transition: background-color 200ms ease-in-out;
 				transition: background-color 200ms ease-in-out;
-			}				
-			
+			}
+
 			#field-switch{
 				margin:15px 0 10px 0px;;
 				height:34px;
@@ -99,7 +99,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -167,7 +167,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<li>
 								<a href="student/training-history"> <i class="fa fa-book"></i> 培训历史 </a>
 							</li>
-							
+
 						</ul>
 					</div>
 					<div class="col-xs-10">
@@ -193,10 +193,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<span >上次登录：</span>
 									<span> <fmt:formatDate value="${lastLoginTime }" pattern="yyyy-MM-dd"/> </span>
 								</div> --%>
-								
+
 							</div>
-							
-							
+
+
 
 						</div>
 						<div class="page-content row">
@@ -210,19 +210,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										<option value="5">医药行业考试</option> -->
 								</select>
 								<div class="page-content row">
-									
+
 									<div class="col-xs-8">
 										<div id="mychart" style="height:450px;"></div>
 										<p>此统计数据不包括简答、论述、分析等主观题</p>
 									</div>
 									<div class="col-xs-4" id="radar-legend">
-										
+
 									</div>
 								</div>
-								
+
 							</div>
-								
-							
+
+
 						</div>
 
 					</div>
@@ -230,7 +230,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 		</div>
 
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -244,7 +244,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -253,21 +253,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script type="text/javascript" src="resources/js/jquery/jquery-1.9.0.min.js"></script>
 		<script type="text/javascript" src="resources/js/echarts-all.js"></script>
 		<!-- <script type="text/javascript" src="resources/chartjs/Chart.min.js"></script> -->
-		
+
 		<!-- Bootstrap JS -->
 		<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
-		
+
 		<script type="text/javascript">
 
 		$("#field-switch").val("${fieldId}");
 		$("#field-switch").change(function(){
 			window.location.href="student/usercenter/"+ $(this).val();
 		});
-		
-			
+
+
 			$(function(){
 				var option = {
-					    
+
 					    tooltip : {
 					        trigger: 'axis'
 					    },

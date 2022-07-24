@@ -252,25 +252,25 @@ request.setAttribute("leftMenuId",list[3]);
 															<!-- <span>易错题</span>
 															<span>送分题</span> -->
 														</div>
-													
+
 													</td>
 
 												<td>${items.questionTypeName }</td><td>${items.fieldName }</td><td>${items.pointName }</td>
-												<td>${items.creator }</td> 
+												<td>${items.creator }</td>
 												<td>
 													<c:choose>
 														<c:when test="${items.creator == sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 															<a class="change-property btn-sm btn-info"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
 															<a class="delete-question-btn btn-sm btn-danger"><i class="ace-icon fa fa-trash-o bigger-120"></i></a>
-															
+
 															<!--  <i class="fa fa-pencil change-property"></i>
 															 <i class="fa fa-trash-o delete-question-btn"></i> -->
 														</c:when>
 														<c:otherwise>
-															
+
 														</c:otherwise>
 													</c:choose>
-												
+
 												</td>
 											</tr>
 										</c:forEach>
@@ -306,7 +306,7 @@ request.setAttribute("leftMenuId",list[3]);
 																	</select>
 																</div>
 															</div>
-															
+
 															<div style="text-align:center;margin:10px 0;">
 																<button id="add-point-btn" class="btn btn-primary btn-xs">选择知识分类</button>
 																<button id="del-point-btn" class="btn btn-danger btn-xs">删除知识分类</button>
@@ -393,7 +393,7 @@ request.setAttribute("leftMenuId",list[3]);
 			</div>
 		</div>
 
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -407,7 +407,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -417,7 +417,7 @@ request.setAttribute("leftMenuId",list[3]);
 		<!-- Bootstrap JS -->
 		<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="resources/js/all.js"></script>
-		
+
 		<script type="text/javascript" src="resources/js/question-list.js"></script>
 		<script type="text/javascript" src="resources/js/field-2-point.js"></script>
 
@@ -489,7 +489,7 @@ request.setAttribute("leftMenuId",list[3]);
 					$(this).parent().remove();
 				});
 
-				
+
 				$(".delete-question-btn").click(function(){
 					if(confirm("确定要删除吗？删除后无法恢复")){
 						jQuery.ajax({
@@ -504,7 +504,7 @@ request.setAttribute("leftMenuId",list[3]);
 									return false;
 								if (message.result == "success") {
 									util.success("删除成功！", function() {
-										
+
 										window.location.reload();
 									});
 								} else {
@@ -517,8 +517,8 @@ request.setAttribute("leftMenuId",list[3]);
 						});
 
 					}
-				
-					
+
+
 				});
 			});
 

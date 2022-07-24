@@ -57,7 +57,7 @@ String basePath = request.getScheme() + "://"
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -107,19 +107,19 @@ String basePath = request.getScheme() + "://"
 		<div class="content" style="margin-bottom: 100px;">
 
 			<div class="container" style="margin-top: 40px;">
-				
+
 				<div class="row">
 					<div class="col-xs-6">
 						<div style="border-bottom: 1px solid #ddd;">
 							<h3 class="title"><i class="fa fa-cloud-upload"></i> 最近发布的考试</h3>
-							
+
 						</div>
 
 						<div class="question-list">
 
 							<table class="table-striped table">
 								<thead>
-									
+
 									<tr>
 										<td>考试名称</td><td>开始日期</td><td>截止日期</td><td></td>
 									</tr>
@@ -146,21 +146,21 @@ String basePath = request.getScheme() + "://"
 								<tfoot></tfoot>
 							</table>
 
-							
-							
+
+
 
 						</div>
 					</div>
 					<div class="col-xs-6">
 						<div style="border-bottom: 1px solid #ddd;">
 							<h3 class="title"><i class="fa fa-paper-plane-o"></i> 我的考试</h3>
-							
+
 						</div>
 						<div class="question-list">
 
 							<table class="table-striped table">
 								<thead>
-									
+
 									<tr>
 										<td>考试名称</td><td>开始日期</td><td>截止日期</td><td></td>
 									</tr>
@@ -186,7 +186,7 @@ String basePath = request.getScheme() + "://"
 														<a class="btn btn-warning btn-sm">待审核</a>
 													</c:when>
 												</c:choose>
-												
+
 											</td>
 										</tr>
 									</c:forEach>
@@ -197,13 +197,13 @@ String basePath = request.getScheme() + "://"
 						</div>
 						<div style="border-bottom: 1px solid #ddd;">
 							<h3 class="title"><i class="fa fa-paper-plane-o"></i> 模拟考试</h3>
-							
+
 						</div>
 						<div class="question-list">
 
 							<table class="table-striped table">
 								<thead>
-									
+
 									<tr>
 										<td>考试名称</td><td>开始日期</td><td>截止日期</td><td></td>
 									</tr>
@@ -227,13 +227,13 @@ String basePath = request.getScheme() + "://"
 					</div>
 
 				</div>
-				
+
 
 			</div>
 
 		</div>
 
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -247,7 +247,7 @@ String basePath = request.getScheme() + "://"
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -262,7 +262,7 @@ String basePath = request.getScheme() + "://"
 			$(function(){
 				$(".apply-exam-btn").click(function(){
 					var examId = $(this).data("id");
-					
+
 					jQuery.ajax({
 						headers : {
 							'Accept' : 'application/json',

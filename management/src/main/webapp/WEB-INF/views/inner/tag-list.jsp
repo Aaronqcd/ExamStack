@@ -19,7 +19,7 @@ request.setAttribute("leftMenuId",list[3]);
 <html>
   <head>
     	<base href="<%=basePath%>">
-    
+
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>知识分类管理</title>
@@ -29,7 +29,7 @@ request.setAttribute("leftMenuId",list[3]);
 		<link href="resources/bootstrap/css/bootstrap-huan.css" rel="stylesheet">
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<link href="resources/css/exam.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 	</head>
@@ -50,7 +50,7 @@ request.setAttribute("leftMenuId",list[3]);
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -98,7 +98,7 @@ request.setAttribute("leftMenuId",list[3]);
 									<dt>
 										题库：
 									</dt>
-									<dd>	
+									<dd>
 										<c:choose>
 											<c:when test="${fieldId == 0 }">
 												<span data-id="0" class="label label-info">全部</span>
@@ -107,10 +107,10 @@ request.setAttribute("leftMenuId",list[3]);
 												<span data-id="0">全部</span>
 											</c:otherwise>
 										</c:choose>
-										
-										
+
+
 										<c:forEach items="${fieldList }" var="item">
-										
+
 											<c:choose>
 												<c:when test="${fieldId == item.fieldId }">
 													<span data-id="${item.fieldId}" class="label label-info">${item.fieldName}</span>
@@ -119,7 +119,7 @@ request.setAttribute("leftMenuId",list[3]);
 													<span data-id="${item.fieldId }">${item.fieldName }</span>
 												</c:otherwise>
 											</c:choose>
-											
+
 										</c:forEach>
 									</dd>
 								</dl>
@@ -127,8 +127,8 @@ request.setAttribute("leftMenuId",list[3]);
 									<ul class="pagination pagination-sm">${pageStr}</ul>
 								</div>
 							</div>
-							
-							
+
+
 							<div id="field-list">
 								<table class="table-striped table">
 									<thead>
@@ -164,7 +164,7 @@ request.setAttribute("leftMenuId",list[3]);
 												</td>
 											</tr>
 										</c:forEach>
-										
+
 									</tbody><tfoot></tfoot>
 								</table>
 							</div>
@@ -178,7 +178,7 @@ request.setAttribute("leftMenuId",list[3]);
 			</div>
 		</div>
 
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -192,7 +192,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -203,6 +203,6 @@ request.setAttribute("leftMenuId",list[3]);
 		<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="resources/js/all.js"></script>
 		<script type="text/javascript" src="resources/js/point-list.js"></script>
-		
+
 	</body>
 </html>

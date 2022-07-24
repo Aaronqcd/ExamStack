@@ -26,7 +26,7 @@ String basePath = request.getScheme() + "://"
 		<link href="resources/font-awesome/css/font-awesome.min.css"
 		rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<style>
 			.question-number{
 				color: #5cb85c;
@@ -35,7 +35,7 @@ String basePath = request.getScheme() + "://"
 				width: 30px;
 				text-align: center;
 			}
-			
+
 			.question-number-2{
 				color: #5bc0de;
 				font-weight: bolder;
@@ -50,16 +50,16 @@ String basePath = request.getScheme() + "://"
 				width: 30px;
 				text-align: center;
 			}
-			
+
 			a.join-practice-btn{
 				margin:0;
 				margin-left:20px;
 			}
-			
+
 			.content ul.question-list-knowledge{
 				padding:8px 20px;
 			}
-			
+
 			.knowledge-title{
 				background-color:#EEE;
 				padding:2px 10px;
@@ -68,11 +68,11 @@ String basePath = request.getScheme() + "://"
 				border:1px solid #FFF;
 				border-radius:4px;
 			}
-			
+
 			.knowledge-title-name{
 				margin-left:8px;
 			}
-			
+
 			.point-name{
 				width:200px;
 				display:inline-block;
@@ -94,7 +94,7 @@ String basePath = request.getScheme() + "://"
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -149,8 +149,8 @@ String basePath = request.getScheme() + "://"
 				${errorMsg }
 			</div>
 		</div>
-		
-		<footer>
+
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -164,7 +164,7 @@ String basePath = request.getScheme() + "://"
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -183,7 +183,7 @@ String basePath = request.getScheme() + "://"
 				alert("请至少更新浏览器版本至IE8或以上版本");
 			}
 		});
-		
+
 		function checkBrowser() {
 			var browser = navigator.appName;
 			var b_version = navigator.appVersion;
@@ -197,30 +197,30 @@ String basePath = request.getScheme() + "://"
 			} else
 				return true;
 		}
-		
+
 		function bindQuestionKnowledage(){
 			$(".knowledge-title").click(function(){
 				var ul = $(this).parent().find(".question-list-knowledge");
-				
+
 				if(ul.is(":visible")){
 					$(this).find(".fa-chevron-down").hide();
 					$(this).find(".fa-chevron-up").show();
-					
+
 					$(".question-list-knowledge").slideUp();
-					
+
 				}else{
 					$(".fa-chevron-down").hide();
 					$(".fa-chevron-up").show();
-					
+
 					$(this).find(".fa-chevron-up").hide();
 					$(this).find(".fa-chevron-down").show();
-					
+
 					$(".question-list-knowledge").slideUp();
 					ul.slideDown();
-					
+
 				}
-				
-				
+
+
 			});
 		}
 		</script>

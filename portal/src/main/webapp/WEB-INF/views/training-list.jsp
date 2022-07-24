@@ -57,7 +57,7 @@ String basePath = request.getScheme() + "://"
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -110,7 +110,7 @@ String basePath = request.getScheme() + "://"
 						<div class="col-xs-12">
 							<div style="border-bottom: 1px solid #ddd;">
 							<h3 class="title"><i class="fa fa-book"></i>培训资料</h3>
-							
+
 							</div>
 							<div id="training-list">
 							<table class="table-striped table">
@@ -123,24 +123,24 @@ String basePath = request.getScheme() + "://"
 										<td>截止时间</td>
 										<td>操作</td>
 									</tr>
-								</thead> 
+								</thead>
 								<tbody>
 									<c:forEach items="${trainingList }" var="item">
 										<tr>
 											<td style="display:none;">${item.trainingId }</td>
 											<td>
 												${item.trainingName }
-											
+
 											</td>
 											<td style="width:50%;">
 												<div style="font-size:12px;padding:10px 0px;">
-												
+
 													${item.trainingDesc }
 												</div>
 											</td>
 											<td><fmt:formatDate value="${item.expTime}"
 													pattern="yyyy-MM-dd" /></td>
-											
+
 											<%-- <td>${item.trainingDesc }</td> --%>
 											<%-- <td><fmt:formatDate value="${item.createTime}"
 													pattern="yyyy-MM-dd" /></td> --%>
@@ -162,11 +162,11 @@ String basePath = request.getScheme() + "://"
 						</div>
 				</div>
 			</div>
-			
+
 
 		</div>
 
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -180,7 +180,7 @@ String basePath = request.getScheme() + "://"
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -191,6 +191,6 @@ String basePath = request.getScheme() + "://"
 		<!-- Bootstrap JS -->
 		<script type="text/javascript"
 		src="resources/bootstrap/js/bootstrap.min.js"></script>
-		
+
 	</body>
 </html>

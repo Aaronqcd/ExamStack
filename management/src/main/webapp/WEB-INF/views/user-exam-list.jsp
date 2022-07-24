@@ -34,7 +34,7 @@ request.setAttribute("leftMenuId",list[3]);
 		<link href="resources/font-awesome/css/font-awesome.min.css"
 		rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<style>
 			.question-number{
 				color: #5cb85c;
@@ -43,7 +43,7 @@ request.setAttribute("leftMenuId",list[3]);
 				width: 30px;
 				text-align: center;
 			}
-			
+
 			.question-number-2{
 				color: #5bc0de;
 				font-weight: bolder;
@@ -58,16 +58,16 @@ request.setAttribute("leftMenuId",list[3]);
 				width: 30px;
 				text-align: center;
 			}
-			
+
 			a.join-practice-btn{
 				margin:0;
 				margin-left:20px;
 			}
-			
+
 			.content ul.question-list-knowledge{
 				padding:8px 20px;
 			}
-			
+
 			.knowledge-title{
 				background-color:#EEE;
 				padding:2px 10px;
@@ -76,11 +76,11 @@ request.setAttribute("leftMenuId",list[3]);
 				border:1px solid #FFF;
 				border-radius:4px;
 			}
-			
+
 			.knowledge-title-name{
 				margin-left:8px;
 			}
-			
+
 			.point-name{
 				width:200px;
 				display:inline-block;
@@ -103,7 +103,7 @@ request.setAttribute("leftMenuId",list[3]);
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -144,13 +144,13 @@ request.setAttribute("leftMenuId",list[3]);
 					<div class="col-xs-10" id="right-content">
 						<div class="page-header">
 							<h1><i class="fa fa-list-ul"></i> 学员名单 </h1>
-							
+
 						</div>
 						<div class="page-content">
 							<input type="hidden" value="${examId }" id="exam-id-hidden">
 							<div id="exampaper-list">
 								<div class="table-search table-controller-item"	style="float: left; margin-top:10px;">
-									
+
 									<div class="input-group search-form" style="float: left;margin-right:20px;">
 										<input type="text" class="form-control" placeholder="搜索学员" value="${searchStr }"
 										id="txt-search">
@@ -179,7 +179,7 @@ request.setAttribute("leftMenuId",list[3]);
 											<!-- <td style="width: 150px;">准考证号</td> -->
 											<td>单位部门</td>
 											<td>总分</td>
-											<td style="width: 90px;">得分 
+											<td style="width: 90px;">得分
 												<a class="fa fa-sort-numeric-asc" href="<%=list[1]%>/exam/exam-student-list/${examId }?order=asc&limit=${limit}&searchStr=${searchStr}"></a>
 												<a class="fa fa-sort-numeric-desc" href="<%=list[1]%>/exam/exam-student-list/${examId }?order=desc&limit=${limit}&searchStr=${searchStr}"></a>
 											</td>
@@ -206,7 +206,7 @@ request.setAttribute("leftMenuId",list[3]);
 												<td>${item.seriNo }</td> --%>
 												<td>${item.depName }</td>
 												<td>
-													
+
 													${item.point }
 													<br>
 													<c:if test="${item.approved == 2 }">
@@ -216,15 +216,15 @@ request.setAttribute("leftMenuId",list[3]);
 														<a target="_blank" href="<%=list[1]%>/exam/mark-exampaper/${item.histId}">重复阅卷</a>
 													</c:if>
 												</td>
-												
-												
+
+
 												<td>
 													<c:choose>
 														<c:when test="${item.pointGet < item.passPoint }">
 															<span style="color:#d9534f">
 																${item.pointGet }
 															</span>
-															
+
 														</c:when>
 														<c:otherwise>
 																<span style="color:#5cb85c">
@@ -239,7 +239,7 @@ request.setAttribute("leftMenuId",list[3]);
 															<span style="color:#d9534f">
 																未通过
 															</span>
-															
+
 														</c:when>
 														<c:otherwise>
 															<span style="color:#5cb85c">
@@ -282,10 +282,10 @@ request.setAttribute("leftMenuId",list[3]);
 										</c:forEach>
 									</tbody>
 									<tfoot>
-	
+
 									</tfoot>
 								</table>
-	
+
 							</div>
 							<div id="page-link-content">
 								${pagingStr }
@@ -353,8 +353,8 @@ request.setAttribute("leftMenuId",list[3]);
 				</div>
 			</div>
 		</div>
-		
-		<footer>
+
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -368,7 +368,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -397,6 +397,6 @@ request.setAttribute("leftMenuId",list[3]);
 				});
 			});
 		</script>
-		
+
 	</body>
 </html>

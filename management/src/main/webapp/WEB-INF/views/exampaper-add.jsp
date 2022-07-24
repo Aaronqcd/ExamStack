@@ -19,7 +19,7 @@ request.setAttribute("leftMenuId",list[3]);
 <html>
   <head>
     <base href="<%=basePath%>">
-    
+
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>试题管理</title>
@@ -28,7 +28,7 @@ request.setAttribute("leftMenuId",list[3]);
 		<link href="resources/bootstrap/css/bootstrap-huan.css" rel="stylesheet">
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<link href="resources/css/question-add.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 		<style>
@@ -36,7 +36,7 @@ request.setAttribute("leftMenuId",list[3]);
 				width:50px;
 				margin-right:0;
 			}
-		
+
 		</style>
 	</head>
 	<body>
@@ -56,7 +56,7 @@ request.setAttribute("leftMenuId",list[3]);
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -112,7 +112,7 @@ request.setAttribute("leftMenuId",list[3]);
 										<c:forEach items="${fieldList }" var="item">
 											<option value="${item.fieldId }">${item.fieldName }</option>
 										</c:forEach>
-										
+
 									</select>
 									<span class="form-message"></span>
 								</div>
@@ -121,7 +121,7 @@ request.setAttribute("leftMenuId",list[3]);
 									<select class="df-input-narrow">
 										<option value="2">自动组卷</option>
 										<option value="1">手动组卷</option>
-										
+
 									</select>
 									<span class="form-message"></span>
 								</div>
@@ -239,7 +239,7 @@ request.setAttribute("leftMenuId",list[3]);
 												</select>
 											</div>
 										</div>
-										
+
 										<div style="text-align:center;margin:10px 0;">
 											<button id="add-point-btn" class="btn btn-primary btn-xs">选择知识分类</button>
 											<button id="del-point-btn" class="btn btn-danger btn-xs">删除知识分类</button>
@@ -265,7 +265,7 @@ request.setAttribute("leftMenuId",list[3]);
 			</div>
 		</div>
 
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -279,7 +279,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -287,11 +287,11 @@ request.setAttribute("leftMenuId",list[3]);
 		<!-- jQuery -->
 		<script type="text/javascript" src="resources/js/jquery/jquery-1.9.0.min.js"></script>
 		<script type="text/javascript" src="resources/js/all.js"></script>
-		
+
 		<!-- Bootstrap JS -->
 		<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="resources/js/field-2-point.js"></script>
 		<script type="text/javascript" src="resources/js/exampaper-add.js"></script>
-		
+
 	</body>
 </html>

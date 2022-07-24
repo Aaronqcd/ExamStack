@@ -19,7 +19,7 @@ request.setAttribute("leftMenuId",list[3]);
 <html>
   <head>
     	<base href="<%=basePath%>">
-    
+
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>教师管理</title>
@@ -29,7 +29,7 @@ request.setAttribute("leftMenuId",list[3]);
 		<link href="resources/bootstrap/css/bootstrap-huan.css" rel="stylesheet">
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<link href="resources/css/exam.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 	</head>
@@ -50,7 +50,7 @@ request.setAttribute("leftMenuId",list[3]);
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -99,7 +99,7 @@ request.setAttribute("leftMenuId",list[3]);
 										<button class="btn btn-default btn-sm" id="add-field-modal-btn">
 											<i class="fa fa-plus-square"></i> 添加专业题库
 										</button>
-									</div>	
+									</div>
 								</div>
 								<table class="table-striped table">
 									<thead>
@@ -124,11 +124,11 @@ request.setAttribute("leftMenuId",list[3]);
 														<c:otherwise>
 															<span class="btn-sm" data-id="${item.fieldId }" disabled="disabled"><i class="ace-icon fa fa-ban"></i></span>
 														</c:otherwise>
-													</c:choose>	
+													</c:choose>
 												</td>
 											</tr>
 										</c:forEach>
-										
+
 									</tbody><tfoot></tfoot>
 								</table>
 							</div>
@@ -143,7 +143,7 @@ request.setAttribute("leftMenuId",list[3]);
 		</div>
 
 		<footer>
-			<div class="container">
+			<%--<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="copy">
@@ -154,7 +154,7 @@ request.setAttribute("leftMenuId",list[3]);
 					</div>
 				</div>
 
-			</div>
+			</div>--%>
 						<div class="modal fade" id="add-field-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -178,7 +178,7 @@ request.setAttribute("leftMenuId",list[3]);
 													<span class="form-message"></span>
 													<br>
 												</div>
-												
+
 											</form>
 
 										</div>
@@ -192,7 +192,7 @@ request.setAttribute("leftMenuId",list[3]);
 										</div>
 									</div>
 								</div>
-							</div>		
+							</div>
 		</footer>
 
 		<!-- Slider Ends -->
@@ -212,7 +212,7 @@ request.setAttribute("leftMenuId",list[3]);
 						backdrop : true,
 						keyboard : true
 					});
-	
+
 				});
 			});
 		</script>

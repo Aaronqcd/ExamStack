@@ -27,7 +27,7 @@ String basePath = request.getScheme() + "://"
 		<link href="resources/font-awesome/css/font-awesome.min.css"
 		rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<style>
 			.question-number {
 				color: #5cb85c;
@@ -98,7 +98,7 @@ String basePath = request.getScheme() + "://"
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -146,7 +146,7 @@ String basePath = request.getScheme() + "://"
 
 		<!-- Slider starts -->
 
-		<div class="full-slider">
+		<%--<div class="full-slider">
 			<!-- Slider (Flex Slider) -->
 
 			<div class="container">
@@ -182,18 +182,18 @@ String basePath = request.getScheme() + "://"
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>--%>
 		<div class="content" style="padding:30px 0 0 0;">
 			<div class="container">
 				<div class="row">
 					<a class="select-test col-xs-4 home-link-anchor" href="student/practice-list">
 						<div class="select-test-icon">
 							<i class="fa fa-book"></i>
-	
+
 						</div> <h3> 试题练习 </h3>
 						<p>
 							您可以免费获取对应专业的培训视频或者文档资料，通过在线练习可以考察您的知识掌握程度。
-						</p> 
+						</p>
 					</a>
 					<a class="select-test col-xs-4 home-link-anchor" href="exam-list">
 						<div class="select-test-icon">
@@ -201,7 +201,7 @@ String basePath = request.getScheme() + "://"
 						</div> <h3> 在线考试 </h3>
 						<p>
 							参加正式或者模拟考试，您的教师可以发布正式的考试，您也可以主动申请这些考试
-						</p> 
+						</p>
 					</a>
 					<div class="select-test col-xs-4">
 						<div>
@@ -366,15 +366,15 @@ String basePath = request.getScheme() + "://"
 									</li>
 								</c:otherwise>
 							</c:choose>
-							
-							
+
+
 						</ul>
 					</div>
 				</div>
 			</c:if>
-			
+
 		</div>
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -388,7 +388,7 @@ String basePath = request.getScheme() + "://"
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -407,7 +407,7 @@ String basePath = request.getScheme() + "://"
 				alert("请至少更新浏览器版本至IE8或以上版本");
 			}
 		});
-		
+
 		function checkBrowser() {
 			var browser = navigator.appName;
 			var b_version = navigator.appVersion;
@@ -421,30 +421,30 @@ String basePath = request.getScheme() + "://"
 			} else
 				return true;
 		}
-		
+
 		function bindQuestionKnowledage(){
 			$(".knowledge-title").click(function(){
 				var ul = $(this).parent().find(".question-list-knowledge");
-				
+
 				if(ul.is(":visible")){
 					$(this).find(".fa-chevron-down").hide();
 					$(this).find(".fa-chevron-up").show();
-					
+
 					$(".question-list-knowledge").slideUp();
-					
+
 				}else{
 					$(".fa-chevron-down").hide();
 					$(".fa-chevron-up").show();
-					
+
 					$(this).find(".fa-chevron-up").hide();
 					$(this).find(".fa-chevron-down").show();
-					
+
 					$(".question-list-knowledge").slideUp();
 					ul.slideDown();
-					
+
 				}
-				
-				
+
+
 			});
 		}
 		</script>

@@ -19,7 +19,7 @@ request.setAttribute("leftMenuId",list[3]);
 <html>
   <head>
     	<base href="<%=basePath%>">
-    
+
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>培训管理</title>
@@ -29,13 +29,13 @@ request.setAttribute("leftMenuId",list[3]);
 		<link href="resources/bootstrap/css/bootstrap-huan.css" rel="stylesheet">
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<link href="resources/css/exam.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 		<style type="text/css">
-			
+
 			a.btn{
-				    margin-top: 0px; 
+				    margin-top: 0px;
 			}
 			.section-navi-item {
 			    display: inline-block;
@@ -49,7 +49,7 @@ request.setAttribute("leftMenuId",list[3]);
 			    color: #428bca;
 			    font-size: 12px;
 			    cursor: pointer;
-			}	
+			}
 		</style>
 	</head>
 	<body>
@@ -69,7 +69,7 @@ request.setAttribute("leftMenuId",list[3]);
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -151,37 +151,37 @@ request.setAttribute("leftMenuId",list[3]);
 																		<a class="section-navi-item">${processItem.sectionName }</a>
 																	</c:otherwise>
 																</c:choose>
-																
+
 															</c:forEach>
-															
+
 														</div>
-													</td>	
-													
+													</td>
+
 												</tr>
 											</c:forEach>
-											
+
 										</tbody><tfoot></tfoot>
 									</table>
 								</div>
 							</div>
-							
+
 							<div id="page-link-content">
-							
+
 								<ul class="pagination pagination-sm">
 									${pageStr}
 								</ul>
 							</div>
-							
-							
-							
+
+
+
 
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -195,7 +195,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -207,6 +207,6 @@ request.setAttribute("leftMenuId",list[3]);
 		<script type="text/javascript" src="resources/chart/raphael-min.js"></script>
 		<script type="text/javascript" src="resources/js/all.js"></script>
 		<script type="text/javascript" src="resources/js/training-process-list.js"></script>
-		
+
 	</body>
 </html>

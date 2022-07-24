@@ -163,11 +163,11 @@ request.setAttribute("leftMenuId",list[3]);
 														</c:otherwise>
 													</c:choose> </span>
 													<span class="r-reset-pwd-btn btn-sm btn-warning" data-id="21321" data-depid="6">密码</span>
-													
-												
+
+
 												</td>
-													
-													
+
+
 											</tr>
 
 										</c:forEach>
@@ -188,7 +188,7 @@ request.setAttribute("leftMenuId",list[3]);
 		</div>
 
 		<footer>
-			<div class="container">
+			<%--<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="copy">
@@ -199,7 +199,7 @@ request.setAttribute("leftMenuId",list[3]);
 					</div>
 				</div>
 
-			</div>
+			</div>--%>
 			<div class="modal fade" id="add-teacher-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -301,7 +301,7 @@ request.setAttribute("leftMenuId",list[3]);
 													<br>
 												</div>
 											</form>
-											
+
 										</div>
 										<div class="modal-footer">
 											<button type="button" class="btn btn-default" data-dismiss="modal">
@@ -311,10 +311,10 @@ request.setAttribute("leftMenuId",list[3]);
 												确定修改
 											</button>
 										</div>
-										
+
 									</div>
 								</div>
-			</div>	
+			</div>
 			<div class="modal fade" id="update-teacher-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -422,7 +422,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 				});
 			});
-			
+
 			$(".r-reset-pwd-btn").click(function() {
 				$("#reset-pwd-modal").modal({
 					backdrop : true,

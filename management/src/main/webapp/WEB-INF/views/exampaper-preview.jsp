@@ -19,7 +19,7 @@ request.setAttribute("leftMenuId",list[3]);
 <html>
   <head>
     <base href="<%=basePath%>">
-    
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>ExamStack</title>
@@ -28,7 +28,7 @@ request.setAttribute("leftMenuId",list[3]);
 		<link href="resources/bootstrap/css/bootstrap-huan.css" rel="stylesheet">
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<link href="resources/css/exam.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 		<style>
@@ -42,9 +42,9 @@ request.setAttribute("leftMenuId",list[3]);
 			#add-more-qt-to-paper i{
 				color: #47a447;
 				cursor: pointer;
-				margin-right:5px;	
+				margin-right:5px;
 			}
-			
+
 			#qt-selector-iframe{
 				border:none;
 				height:600px;
@@ -52,7 +52,7 @@ request.setAttribute("leftMenuId",list[3]);
 			.tmp-ques-remove{
 				margin-left:10px;
 			}
-			
+
 			.question-point{
 				padding:0 8px;
 				margin:0 2px;
@@ -76,7 +76,7 @@ request.setAttribute("leftMenuId",list[3]);
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -128,20 +128,20 @@ request.setAttribute("leftMenuId",list[3]);
 											<i class="fa fa-send"></i>
 											<span id="exampaper-title-name">${exampapername} </span>
 											<span style="display:none;" id="exampaper-id">${exampaperid}</span>
-											
+
 										</div>
 										<div id="exampaper-desc-container">
 											<div id="exampaper-desc" class="exampaper-filter">
-												
-											
+
+
 											</div>
 											<div style="margin-top: 5px;">
 												<span>试卷总分：</span><span id="exampaper-total-point" style="margin-right:20px;"></span>
 												<!-- <span id="add-more-qt-to-paper"><i class="small-icon fa fa-plus-square" title="添加选项"></i><span>增加更多题目</span></span> -->
 											</div>
 										</div>
-										
-										
+
+
 									</div>
 									<ul id="exampaper-body" style="padding:0px;">
 										${htmlStr }
@@ -158,7 +158,7 @@ request.setAttribute("leftMenuId",list[3]);
 										<div style="padding-left:30px;">
 											<!-- <button class="btn btn-danger"><i class="fa fa-save"></i>保存试卷</button> -->
 										</div>
-										
+
 									</div>
 								</div>
 
@@ -181,7 +181,7 @@ request.setAttribute("leftMenuId",list[3]);
 							        <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
 							        <button id="add-list-to-exampaper" type="button" class="btn btn-primary">添加选中</button>
 							      </div>
-						      
+
 						    </div><!-- /.modal-content -->
 						  </div><!-- /.modal-dialog -->
 			</div>
@@ -203,17 +203,17 @@ request.setAttribute("leftMenuId",list[3]);
 											<button class="btn btn-sm btn-success" id="update-point-btn"><i class="fa fa-check"></i>仅修改第<span id="qt-point-target-index"></span>题</button>
 											<button class="btn btn-sm btn-warning" id="update-point-type-btn"><i class="fa fa-random"></i>批量更新该题型</button>
 										</div>
-									</form> 
+									</form>
 
 						      </div>
-						      
+
 						    </div><!-- /.modal-content -->
 						  </div><!-- /.modal-dialog -->
 			</div>
-			
+
 		</div>
 
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -227,7 +227,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -238,6 +238,6 @@ request.setAttribute("leftMenuId",list[3]);
 		<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="resources/js/all.js"></script>
 		<script type="text/javascript" src="resources/js/exampaper-preview.js"></script>
-		
+
 	</body>
 </html>

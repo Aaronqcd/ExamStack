@@ -296,7 +296,7 @@ request.setAttribute("leftMenuId",list[3]);
 													<br>
 												</div>
 											</form>
-											
+
 										</div>
 										<div class="modal-footer">
 											<button type="button" class="btn btn-default" data-dismiss="modal">
@@ -306,10 +306,10 @@ request.setAttribute("leftMenuId",list[3]);
 												确定修改
 											</button>
 										</div>
-										
+
 									</div>
 								</div>
-							</div>	
+							</div>
 							<div class="modal fade" id="update-user-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -469,7 +469,7 @@ request.setAttribute("leftMenuId",list[3]);
 				</div>
 			</div>
 		</div>
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -483,7 +483,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -550,10 +550,10 @@ request.setAttribute("leftMenuId",list[3]);
 							if (!util.checkSessionOut(jqXHR))
 								return false;
 							if (message.result == "success") {
-								
+
 								util.success("操作成功", function() {
 								//	window.location.reload();
-								
+
 								});
 								$("#link-user-modal-r").modal('hide');
 							} else {
@@ -567,7 +567,7 @@ request.setAttribute("leftMenuId",list[3]);
 					});
 					return false;
 				});
-				
+
 				$("#link-user-btn").click(function(){
 					var groupId = $(".user-group-nav .active").data("id");
 					var userNames = $("#name-add-link").val();

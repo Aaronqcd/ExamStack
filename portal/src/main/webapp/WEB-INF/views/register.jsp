@@ -201,7 +201,7 @@
 		</div>
 
 	</div>
-	<footer>
+	<%--<footer>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -219,7 +219,7 @@
 
 		</div>
 
-	</footer>
+	</footer>--%>
 
 	<!-- Slider Ends -->
 	<!-- jQuery -->

@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<head>
 		<meta charset="utf-8" />
 		<base href="<%=basePath%>">
-		
+
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<c:choose>
 						<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 							<div id="login-info-user">
-								
+
 								<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 								<span>|</span>
 								<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -133,10 +133,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									</div>
 									<div id="exampaper-desc-container">
 										<div id="exampaper-desc" class="exampaper-filter">
-										
+
 										</div>
 									</div>
-									
+
 								</div>
 								<input type="hidden" id="start-time" value="${startTime }">
 								<input type="hidden" id="hist-id" value="${examHistoryId }">
@@ -164,7 +164,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 
 		</div>
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -178,7 +178,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -190,7 +190,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script type="text/javascript" src="resources/js/all.js?v=0712"></script>
 		<script type="text/javascript" src="resources/js/paper-examing.js"></script>
 
-		
+
 
 	</body>
 </html>

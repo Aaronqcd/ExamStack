@@ -14,7 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     	<base href="<%=basePath%>">
-    
+
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>统计分析</title>
@@ -24,30 +24,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<link href="resources/bootstrap/css/bootstrap-huan.css" rel="stylesheet">
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<link href="resources/css/exam.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 		<style>
 			.table-striped a{
 				text-decoration: underline;
 			}
-			
+
 			.span-success{
 				color:#5cb85c;
 				font-weight:bolder;
 			}
-			
+
 			.span-danger{
 				color:#d9534f;
 				font-weight:bolder;
 			}
-			
+
 			.span-info{
 				color:#5bc0de;
 				font-weight:bolder;
 			}
 			h6{
-				font-weight:bold !important; 
+				font-weight:bold !important;
 			}
 			#field-switch{
 				margin:15px 0 0 0px;;
@@ -69,7 +69,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -153,7 +153,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<option value="5">医药行业考试</option> -->
 								</select>
 								<div id="question-list">
-									
+
 									<c:forEach items="${kparl }" var="item">
 										<table class="table-striped table">
 											<thead>
@@ -180,10 +180,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<tfoot></tfoot>
 										</table>
 									</c:forEach>
-									
+
 								</div>
 							</div>
-							
+
 
 						</div>
 
@@ -192,7 +192,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 		</div>
 
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -206,7 +206,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -219,13 +219,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script type="text/javascript" src="resources/chart/morris.js"></script>
 		<script type="text/javascript" src="resources/js/exam-finished.js"></script>
 		<script type="text/javascript">
-		
+
 			$("#field-switch").val("${fieldId}");
 			$("#field-switch").change(function(){
 				window.location.href="student/analysis/"+ $(this).val();
 			});
-		
-		
+
+
 		</script>
 	</body>
 </html>

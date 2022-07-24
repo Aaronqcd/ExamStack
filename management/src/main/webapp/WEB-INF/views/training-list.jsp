@@ -19,7 +19,7 @@ request.setAttribute("leftMenuId",list[3]);
 <html>
   <head>
     	<base href="<%=basePath%>">
-    
+
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>培训管理</title>
@@ -29,13 +29,13 @@ request.setAttribute("leftMenuId",list[3]);
 		<link href="resources/bootstrap/css/bootstrap-huan.css" rel="stylesheet">
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<link href="resources/css/exam.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 		<style type="text/css">
 			#training-table  > tbody{
 				cursor:pointer;
-				
+
 			}
 			#training-table > tbody tr:hover{
 				background-color:#EEE;
@@ -62,7 +62,7 @@ request.setAttribute("leftMenuId",list[3]);
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -108,7 +108,7 @@ request.setAttribute("leftMenuId",list[3]);
 						<div class="page-content">
 							<div class="row">
 								<div class="col-xs-6">
-								
+
 									<table class=" table" id="training-table">
 										<!-- <h4>
 											培训列表
@@ -134,7 +134,7 @@ request.setAttribute("leftMenuId",list[3]);
 													<td style="display:none;">${item.trainingId }</td>
 													<td>
 														<a class="training-sections" data-id="${item.trainingId }" >${item.trainingName }</a>
-													
+
 														<p>${item.creatorName } <i class="fa fa-clock-o"></i><fmt:formatDate value="${item.createTime }" pattern="yyyy-MM-dd HH:mm"/></p>
 													</td>
 													<%-- <td><fmt:formatDate value="${item.createTime }" pattern="yyyy-MM-dd HH:mm"/></td>
@@ -146,31 +146,31 @@ request.setAttribute("leftMenuId",list[3]);
 													</td>
 												</tr>
 											<%-- 	<tr><td class="collapse" data-id="${item.trainingId }" colspan="6">11111</td></tr> --%>
-												
+
 											</c:forEach>
-											
+
 										</tbody><tfoot></tfoot>
 									</table>
 								</div>
-								
+
 								<div class="col-xs-6" id="section-content">
-								
-								
-								
+
+
+
 								</div>
 								<div class="col-xs-6" >
 									<button class="btn btn-sm btn-info add-section-btn" style="display:none;" >新增章节</button>
 								</div>
-								
+
 							</div>
-							
+
 							<div id="page-link-content">
-							
+
 								<ul class="pagination pagination-sm">
 									${pageStr}
 								</ul>
 							</div>
-							
+
 							<div class="modal fade" id="add-section-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -226,15 +226,15 @@ request.setAttribute("leftMenuId",list[3]);
 									</div>
 								</div>
 							</div>
-							
+
 
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -248,7 +248,7 @@ request.setAttribute("leftMenuId",list[3]);
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -264,13 +264,13 @@ request.setAttribute("leftMenuId",list[3]);
 		<script type="text/javascript" src="resources/js/add-training-section.js"></script>
 		<script>
 			$(function() {
-				
+
 				if($("tbody tr").length > 0){
 					$("tbody tr:first").addClass("check-tr");
 					$('#section-content').load(util.getCurrentRole() + '/training/section-list/' + $(    $("tbody tr:first").find("td")[1]     ).find("a").data("id"));
-					  
+
 					  $(".add-section-btn").show();
-					  
+
 					  $("#training-name").val($(    $("tbody tr:first").find("td")[1]     ).find("a").text()                                  );
 					  $("#training-add-id").val($(    $("tbody tr:first").find("td")[1]     ).find("a").data("id")                                  );
 					  console.log($("#training-add-id").val());
@@ -280,21 +280,21 @@ request.setAttribute("leftMenuId",list[3]);
 					$("tr").removeClass("check-tr");
 					$(this).addClass("check-tr");
 					  $('#section-content').load(util.getCurrentRole() + '/training/section-list/' + $(    $(this).find("td")[1]     ).find("a").data("id"));
-					  
+
 					  $(".add-section-btn").show();
-					  
+
 					  $("#training-name").val($(    $(this).find("td")[1]     ).find("a").text()                                  );
 					  $("#training-add-id").val($(    $(this).find("td")[1]     ).find("a").data("id")                                  );
 					  console.log($("#training-add-id").val());
 				});
-				
-				
+
+
 				$(".add-section-btn").click(function(){
 						$("#add-section-modal").modal({
 							backdrop : true,
 							keyboard : true
 						});
-					
+
 				});
 			});
 		</script>

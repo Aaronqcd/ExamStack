@@ -126,16 +126,16 @@
 										<c:if test="${fn:contains(sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.authorities,'ROLE_ADMIN') }">
 											<td>操作</td>
 										</c:if>
-										
-										
+
+
 									</tr>
 								</thead>
 								<tbody>
 									<c:forEach items="${examList }" var="item">
 										<tr>
 											<td>${item.examId }</td>
-											<td><span>${item.examName }</span> 
-												<br> 
+											<td><span>${item.examName }</span>
+												<br>
 												<a	href="<%=list[1]%>/exam/exam-student-list/${item.examId }" target="_blank">学员名单</a></td>
 											<td><fmt:formatDate value="${item.effTime}"
 													pattern="yyyy-MM-dd HH:mm" /></td>
@@ -166,10 +166,10 @@
 													</c:choose>
 													<span class="link-user-r-btn btn-sm btn-info" title="关联学员" data-id="${item.examId }">
 													<i class="fa fa-random"></i>
-													</span> 
+													</span>
 												</td>
 											</c:if>
-											
+
 
 										</tr>
 									</c:forEach>
@@ -215,7 +215,7 @@
 			</div>
 		</div>
 	</div>
-	<footer>
+	<%--<footer>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -229,7 +229,7 @@
 
 		</div>
 
-	</footer>
+	</footer>--%>
 
 	<!-- Slider Ends -->
 

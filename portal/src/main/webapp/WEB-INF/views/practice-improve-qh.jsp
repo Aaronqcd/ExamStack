@@ -23,25 +23,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/exam.css" rel="stylesheet" type="text/css">
 		<link href="resources/css/style.css" rel="stylesheet">
-		
+
 		<style type="text/css">
 			.question-body {
 				padding: 30px 30px 20px 30px;
 				background: #FFF;
 			}
-			
+
 			ul#exampaper-body{
 				margin-bottom: 0px;
 			}
-			
+
 			ul#exampaper-body li{
 				padding-bottom:0px;
 			}
 			.question-body{
 				min-height:300px;
 			}
-		
-			
+
+
 		</style>
 	</head>
 	<body>
@@ -134,7 +134,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 								</div>
 								<div id="question-submit">
-									<button class="btn-success btn" style="width:100%;" id="switch-model-btn" data-exam="true"> 
+									<button class="btn-success btn" style="width:100%;" id="switch-model-btn" data-exam="true">
 										答题模式
 									</button>
 								</div>
@@ -166,8 +166,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									${questionStr }
 								</ul>
 								<div id="exampaper-footer">
-										
-									
+
+
 									<div id="question-switch">
 										<button class="btn-success btn" id="previous-q-btn" style="width:160px;">
 												<i class="fa fa-chevron-circle-left"></i>上一题
@@ -218,7 +218,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										<p class="comment-user-text">
 											应该选B不是吗？
 										</p>
-										
+
 									</li>
 									<li class="comment-list-item">
 										<div class="comment-user-container">
@@ -237,7 +237,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										<p class="comment-user-text">
 											应该选B不是吗？
 										</p>
-										
+
 									</li> -->
 								</ul>
 								<div id="show-more-div">
@@ -245,18 +245,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<input type="hidden" id="last-floor-hidden" value="0">
 									<button id="show-more-btn">更多评论</button>
 								</div>
-								
+
 							</div>
 
 						</div>
-						
-						
+
+
 					</div>
 				</div>
 			</div>
 
 		</div>
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -270,7 +270,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 

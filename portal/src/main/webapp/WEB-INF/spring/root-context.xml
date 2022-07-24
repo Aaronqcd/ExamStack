@@ -5,7 +5,7 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xsi:schemaLocation="
-	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
 	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
@@ -25,16 +25,16 @@
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		
+
 		<!-- <property name="jdbcUrl"
 			value="jdbc:mysql://218.93.12.45:33306/examonline?useUnicode=true&amp;characterEncoding=UTF-8" />
 		<property name="user" value="examonline" />
 		<property name="password" value="examonline" /> -->
 		<property name="jdbcUrl"
-			value="jdbc:mysql://localhost:3306/examstack?useUnicode=true&amp;characterEncoding=UTF-8" />
+			value="jdbc:mysql://localhost:3306/examstack?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=GMT" />
 		<property name="user" value="root" />
-		<property name="password" value="" />
-		
+		<property name="password" value="123456" />
+
 		<property name="maxPoolSize" value="50"></property>
 		<property name="minPoolSize" value="10"></property>
 		<property name="initialPoolSize" value="10"></property>
@@ -90,9 +90,9 @@
 		p:configLocation="classpath:ehcache.xml" p:shared="true" />
 
 	<!-- spring cache -->
-	<!-- <bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager"> 
-		<property name="caches"> <set> <bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean" 
-		p:name="default" /> <bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean" 
+	<!-- <bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
+		<property name="caches"> <set> <bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean"
+		p:name="default" /> <bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean"
 		p:name="wordCache" /> </set> </property> </bean> -->
 
 	<!-- <bean id="Test" class="com.extr.util.EhcacheTest" /> -->
@@ -101,6 +101,6 @@
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
-	
+
 	<beans:import resource="rabbitmq.xml" />
 </beans>

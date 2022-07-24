@@ -19,7 +19,7 @@ request.setAttribute("leftMenuId","");
 <html>
   <head>
     <base href="<%=basePath%>">
-    
+
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>DashBoard</title>
@@ -31,8 +31,8 @@ request.setAttribute("leftMenuId","");
 		<link href="resources/css/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
 		<link href='resources/fullcalendar-2.1.1/fullcalendar.css' rel='stylesheet' />
 		<link href='resources/fullcalendar-2.1.1/fullcalendar.print.css' rel='stylesheet' media='print' />
-	
-		
+
+
 		<link href="resources/css/question-add.css" rel="stylesheet">
 		<link href="resources/chart/morris.css" rel="stylesheet">
 		<style>
@@ -62,7 +62,7 @@ request.setAttribute("leftMenuId","");
 						<c:choose>
 							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 								<div id="login-info-user">
-									
+
 									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
 									<span>|</span>
 									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
@@ -120,10 +120,10 @@ request.setAttribute("leftMenuId","");
    							<div class="bs-example bs-example-bg-classes" data-example-id="contextual-backgrounds-helpers">
 							    <p class="bg-success">
 							    	<i class="ace-icon fa fa-check green"></i>
-							    
+
 							   		欢迎使用ExamStack后台管理系统，您可以在此页面快速查看您系统的状态。
 							    </p>
-							    
+
 							    <div class="row" style="margin-top:20px;">
 							    	<div class="col-xs-7">
 							    		<div style="height:100px;">
@@ -155,16 +155,16 @@ request.setAttribute("leftMenuId","");
 												</div>
 											</div>
 							    		</div>
-										
-										
-										
+
+
+
 										<div class="widget-box transparent">
 							    			<div class="widget-header widget-header-flat">
 												<h4 class="widget-title lighter">
 													<i class="ace-icon fa fa-star orange"></i>
 													需要审核
 												</h4>
-												
+
 												<div class="widget-toolbar no-border">
 													<a href="<%=list[1]%>/exam/exam-list" target="_blank">查看更多</a>
 												</div>
@@ -177,22 +177,22 @@ request.setAttribute("leftMenuId","");
 											<td>学员ID</td>
 											<td>姓名</td>
 											<td>单位</td>
-										
+
 											<td>
 												操作
 											</td>
 										</tr>
 									</thead>
 									<tbody>
-										
+
 									</tbody>
 									<tfoot>
-	
+
 									</tfoot>
 								</table>
-													
-													
-																									
+
+
+
 												</div>
 											</div>
 							    		</div>
@@ -202,7 +202,7 @@ request.setAttribute("leftMenuId","");
 													<i class="ace-icon fa fa-rss orange"></i>
 													需要阅卷
 												</h4>
-												
+
 												<div class="widget-toolbar no-border">
 													<a href="<%=list[1]%>/exam/exam-list" target="_blank">查看更多</a>
 												</div>
@@ -222,21 +222,21 @@ request.setAttribute("leftMenuId","");
 										</tr>
 									</thead>
 									<tbody>
-										
-											
-											
+
+
+
 									</tbody>
 									<tfoot>
-	
+
 									</tfoot>
 								</table>
-		 											
-													
-																									
+
+
+
 												</div>
 											</div>
 							    		</div>
-																			    		
+
 							    	</div>
 							    	<div class="col-xs-5">
 							    		<div class="widget-box">
@@ -245,7 +245,7 @@ request.setAttribute("leftMenuId","");
 													<i class="ace-icon fa fa-signal orange"></i>
 													Popular Domains
 												</h4>
-												
+
 												<div class="widget-toolbar no-border">
 													<select id="field-select">
 														<c:forEach items="${fieldList }" var="item">
@@ -256,29 +256,29 @@ request.setAttribute("leftMenuId","");
 											</div>
 							    			<div class="widget-body">
 												<div class="widget-main no-padding">
-													
-													
+
+
 													<div id="mychart" style="height:400px;"></div>
-													
-																									
+
+
 												</div>
 											</div>
 							    		</div>
-							    		
+
 							    		<div id="calendar" style="margin-top:50px;">
-							    		
+
 							    		</div>
 							    	</div>
 							    </div>
 							</div>
-    
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<footer>
+		<%--<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -292,7 +292,7 @@ request.setAttribute("leftMenuId","");
 
 			</div>
 
-		</footer>
+		</footer>--%>
 
 		<!-- Slider Ends -->
 
@@ -300,7 +300,7 @@ request.setAttribute("leftMenuId","");
 		<!-- jQuery -->
 		<script type="text/javascript" src="resources/js/jquery/jquery-1.9.0.min.js"></script>
 		<script type="text/javascript" src="resources/js/all.js"></script>
-		
+
 		<!-- Bootstrap JS -->
 		<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="resources/js/jquery/jquery-ui-1.9.2.custom.min.js"></script>
